@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
-</head>
-<body>
-    <script>
 
-        let arr = [1,2,3,'Jaque',]
-    </script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=,, initial-scale=1.0">
+  <title>Laçoes e Repetições</title>
+</head>
+
+<body>
+  <script>
+
+    /*
+    FOR IN     
+    */
+
+    let obj = {
+      nome: "Jaqueline", 
+      idade: 28
+    }
+
+    let arr = ['A','B','C'];
+    arr.nome = "Jaque";
+
+    console.log(arr);
+
+    for(let i in arr){
+      console.log("dentro do for")
+      // console.log(arr[i]);
+      console.log(i);
+    }
+
+    let  nome = "jaque"
+
+    for(let i of nome){
+      console.log("dentro do for string")
+      console.log(i);
+    }
+    
+
+    /*
+    FOR OFF
+    */
+
+  </script>
 </body>
+
 </html>

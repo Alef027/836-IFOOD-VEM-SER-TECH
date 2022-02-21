@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laços de Repetição</title>
+</head>
+
+<body>
+
+  <script>
+
+    let count = 0;
+
+    while (count <= 10) {
+      console.log(count);
+      count++;
+    }
+
+    /*
+    
+    enquanto ( count for menor ou igual a 10 ) {
+      escreva count no documento;
+      soma mais um em count;
+    } 
+    
+    */
+
+    /*No exemplo com o do While
+     usamos o do para executar a ação 
+     e o while para controlar a condição da ação
+    
+    */
+
+
+    var count1 = 11; // 0
+    do {
+      console.log(count1);
+      count1++;
+    } while (count1 <= 10)
+
+
+    /*
+    For - 
+    Os laços for têm a mesma função dos 
+    laços while, fazer algo repetitivo. 
+    No entanto, ao invés de utilizar uma expressão
+     desconhecida, utilizamos um conjunto 
+     fixo de circunstâncias. 
+     Nele, temos que inicializar uma variável 
+     com um valor qualquer, testar uma condição, e 
+     incrementar ou decrementar o valor da variável 
+     inicial, tudo na mesma instrução.
+    
+    */
+
+    /*
+    for ( valor inicial; condição; incremento++ ou decremento-- ) {
+      Ações;
+      }
+    */
+
+    let numero = 8;
+    for (var i = 1; i <= 10; i++) {
+      console.log('8 x ' + i + " = " + (numero * i));
+    }
+
+    /*
+    Atribuição: var i = 0;
+    Condição: i <= 10; (i é menor ou igual a 10)
+    Atualização: i++ (nesse caso, de incremento)
+    As ações vêm entre colchetes.
+    */
+
+    // removendo a inicialização 
+    var i = 0;
+    for (; i < 9; i++) {
+      console.log(i);
+    }
+
+    // removendo a condição
+    // adicionando um break para nao gerar um 
+    // loop infinito
+    for (var i = 0; ; i++) {
+      console.log(i);
+      if (i > 3) break;
+    }
+
+    // removendo inicialização, condição e expressão
+    var i = 0;
+
+    for (; ;) {
+      if (i > 3) break;
+      console.log(i);
+      i++;
+    }
+
+    /*
+   Outra coisa que é possível fazer é um for em um array
+   */
+
+
+
+    let array = ['Jaqueline', 'Luiz', 'Suelen', 'Carlos']
+    console.log(array);
+
+    for (let i = 0; i < array.length; i++) {
+      console.log("Boas Vindas " + array[i]);
+    }
+
+
+    /*
+    A declaração for...in executa iterações a
+    partir de uma variável específica, 
+    percorrendo todas as propriedades de um objeto.
+
+      A declaração for...of cria uma laço com objetos 
+      interativos ((incluindo, Array, Map, Set, assim 
+      por conseguinte ), executando uma iteração para o
+      valor de cada propriedade distinta.
+
+      O exemplo a seguir mostra a diferença entre o 
+      for...of e o for...in. Enquanto o 
+      for...in interage com o nome das
+        propriedades, o for...of interage com o
+        valor das propriedades.
+    */
+
+
+    let arr = [1, 2, 3, 'Jaque', 5];
+    arr.nome = "Jaque";
+    arr.idade = "28";
+
+    console.log("array antes do for in")
+    console.log(arr)
+
+    for (let i in arr) {
+      console.log("in")
+      console.log(i); // logs "0", "1", "2", "foo"
+    }
+
+    let x = "Jaque";
+    console.log("percorrendo em uma string")
+    console.log(x)
+    for (let u in x) {
+      console.log(u)
+    }
+    for (let u of x) {
+      console.log(u)
+    }
+
+
+    for (let i of arr) {
+      console.log("of")
+      console.log(i); // logs "3", "5", "7"
+    }
+
+    /*
+    Break: interrompe a  execução do laço
+    assim que a condição for atendida
+
+    Continue: continua a execução do laço
+    assim que a condição for atendida   
+    
+    */
+
+    for (let i = 0; i < 1000; i++) {
+      console.log(i + ',');
+
+      if (i >= 5) {
+        console.log("PAROU: " + i)
+        break;
+      }
+    }
+
+    var i = 0;
+    var n = 0;
+
+    while (i < 5) {
+      i++;
+
+      if (i === 3) {
+        console.log("dentro do if: continue" + i)
+        continue;
+      }
+
+      n += i;
+      console.log("resultado de n:" + n)
+    }
+
+  </script>
+
+</body>
+
+</html>

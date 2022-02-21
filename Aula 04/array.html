@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays e Objetos</title>
+</head>
+
+<body>
+  <script>
+    // Criando um array 
+    let arr = [1, 2, 3, 4];
+    console.log(arr);
+
+    // Setando uma variável do tipo array;
+    let arr1 = new Array();
+    console.log(arr1);
+
+    // Verificando quantos registros existe no array
+    // Acessando a propriedade:  length
+    console.log("length:" + arr.length);
+
+    // Criando varios tipos dentro de um  único array 
+    let arr2 = ['Jaque', 1, 2, ['Novo', 'Velho']];
+    console.log(arr2);
+
+    // Acesando um registro específico do array
+    // Feito através do índice do array
+    console.log(arr2[0]);
+
+    // Acessando um array dentro de outro array
+    console.log(arr2[3][0]);
+
+    // Criando uma função dentro de um array
+    // para isso é necessário criar um objeto 
+
+    let arr3 = {
+      andar: function () {
+        console.log("andando");
+      }
+    }
+
+    // retornando o objeto como um todo
+    console.log(arr3);
+    // retornando somente a função
+    console.log(arr3.andar);
+    // executando a função
+    console.log(arr3.andar());
+
+    // Para remover o undefined, basta add um retorno 
+    // na função
+
+    let arr4 = {
+      andar: function () {
+        console.log("andando");
+        return "andou";
+      }
+    }
+    console.log(arr4.andar());
+
+    // Criando um objeto no array 
+    let obj = {
+      nome: 'Jaqueline',
+      idade: 28,
+      signo: 'Gemeos'
+    }
+
+    console.log(obj);
+
+    // Acessando a chave do objeto
+    console.log(obj.nome);
+
+    // Adicionando mais registros de objeto em um array 
+
+    let obj2 = [
+      {
+        nome: 'Jaqueline',
+        idade: 28,
+        signo: 'Gemeos'
+      },
+      {
+        nome: 'Suelen',
+        idade: 28,
+        signo: 'Gemeos'
+      }
+    ]
+    console.log(obj2);
+    // Acessando o registro específico através do index
+    console.log(obj2[0].signo);
+
+    // usando o método join
+    // responsável por juntar os elementos 
+    // do array em formato de string
+    let arrjoin1 = [1,2,3,4];
+    
+    arrjoin1 = arrjoin1.join("-");
+    console.log(arrjoin1);
+
+    // usando o método push
+    // adiciona um elemento no final do array
+    let arrpush = [1,2,3,'Jaque'];
+    arrpush.push('Laurenti');
+    console.log(arrpush);
+
+    // usando o método unshift
+    // adiciona um elemento no começo do array
+    let arrunshift = [1,2,3,'Jaque'];
+    arrunshift.unshift('Laurenti');
+    console.log(arrunshift);
+
+    // usando o metodo pop
+    // retorna o ultimo elemento do array
+    let arrpop = [1,2,3,4,5];
+    console.log(arrpop.pop())
+
+    // usando o metodo shift
+    // retorna o primeiro elemento do array
+    let arrshift = [1,2,3,4,5];
+    console.log(arrshift.shift())
+
+
+    /*LAST IN FIRST OUT*/
+    let lifo = [1,2,3,4] 
+
+   
+
+    lifo.push(5);
+    console.log(lifo);
+    lifo.pop();
+    console.log(lifo);
+    
+
+    /*FIFO - FIRST IN FIRST OUT */
+    let fifo = [1,2,3,4] 
+
+    fifo.push(5);
+    console.log(fifo);
+    fifo.shift();
+    console.log(fifo);
+
+
+  </script>
+</body>
+
+</html>
